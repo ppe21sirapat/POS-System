@@ -1,0 +1,906 @@
+body {
+		margin: 0 ;
+		padding: 0 ;
+		font-family: arial ;
+     }
+
+.container {	
+				display: grid ;
+				max-width: 1920px;
+				width: 100% ; 
+				height: 100% ;
+				grid-template-columns: 55px repeat(11,1fr) ;
+		   }
+
+/********************* Header *********************/
+
+.header {
+			background-color: #333a45 ;
+			width: 100% ;	
+			height: 100% ;
+			grid-column: span 1 ;
+		}
+
+.header-menu { 
+			   width: 100% ;
+			   height: 40px ;
+			   margin-top: 20px ;
+			   padding-top: 10px ;
+			   text-align: center ;
+			 }
+			 
+.cart-box {
+			position: fixed ;
+			bottom: 20px ;
+			right: 30px ;
+			padding: 12.5px ;
+			border-radius: 50% ;
+			background-color: #333a45 ;
+			text-align: center ;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+		  }
+
+.cart-box:hover {
+				  background-color: #555555 ;
+				}
+
+#cart-btn {
+			cursor: pointer ;
+		  }
+
+.cart-count {
+				width: 15px ;
+				height: 15px ;
+				position: absolute ;
+				left: 35px ;
+				background-color: crimson ;
+				color: white ;
+				border-radius: 50% ;
+				text-align: center ;
+				font-size: 10px ;
+				line-height: 15px ;
+			}
+
+.header-menu:nth-child(1) {
+							margin-top: 40px ;
+						  }
+		
+/********************* Header *********************/
+
+/********************* LeftArea *********************/
+
+.leftarea {	
+				background-color: #ffffff ;
+				max-width: 100% ;
+				height: 100% ;
+				grid-column: span 3 ;
+				border-right: solid #333a45 5px ;
+		  }
+
+.payment-btn {
+			   background-color: #ffa500 ;
+			   float: right ; 
+			   color: white ;
+			   width: 100% ;
+			   height: 30px ;
+			   border: none ;
+			   /* border-radius: 6px ; */
+			 }
+
+.payment-btn:hover {
+			         background-color: darkorange ;
+				   }
+
+.clear-btn {
+			 background-color: #f44336 ;
+			 float: left ;
+			 color: white ;
+			 width: 100% ;
+			 height: 30px ;
+			 border: none ; 
+			 /* border-radius: 6px ; */
+			 }
+
+.clear-btn:hover {
+				   background-color: #cf3a2f ;
+				 }
+
+/* .cart-window {
+			  background-color: white ;
+			  position: relative ;
+			  width: 100% ;
+			  height: 100% ;
+			  -webkit-animation-name: animatecart ;
+			  -webkit-animation-duration: 0.4s ;
+			  animation-name: animatecart ;
+			  animation-duration: 0.4s ;
+			  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+			}	
+
+@-webkit-keyframes animatecart {
+								 from { left: -300px ; opacity: 0 ; }
+								 to { left: 0 ; opacity: 1 ; }
+							   }
+
+@keyframes animatecart {
+						 from { left: -300px ; opacity: 0 ; }
+						 to { left: 0 ; opacity: 1 ;}
+				       } */
+
+.tablecart {
+			 width: 100% ;
+			 height: auto ;
+		   }
+
+.tablecart th  {
+				 background-color: #e0e0e0 ;
+			   }
+
+div.no-record {
+				text-align: center ;
+				color: dimgray ;
+     		  }
+
+			 
+/********************* LeftArea *********************/
+
+
+ /********************* RightArea *********************/
+
+.rightarea	{
+				background-color: #ffffff ;
+				max-width: 100% ;
+				height: auto ; 
+				grid-column: span 8 ; 
+			}
+
+.product-type {
+				background-color: #333a45 ;
+				width: 100% ;
+				height: 40px ;
+			  }
+
+.product-type button {
+					 	width: 75px ;
+					 	height: 40px ;
+					 	float: left ;
+						border: none ;
+						background-color: #00326b ;
+						color: white ;
+						border-left: solid black 0.5px ;
+						border-right: solid black 0.5px ;
+					 }
+
+.product-type button:nth-child(1) {
+									margin-left: 20px ;
+								  }
+
+
+.product-type button.active-type {
+									background-color: #0077ff ;
+									color: white ;
+								 }
+
+.product-type button:focus {
+							 outline: none ;
+						   }
+									
+			
+.product-area {
+				display: grid ;
+				grid-template-columns: repeat(4,1fr) ;
+				grid-gap: 1em ;
+			  }
+
+.product-box 	{
+				  width: 275px ;
+				  height: 275px ;
+				  text-align: center ;
+				  background-color: white ;
+				  border: solid #e0e0e0 1.5px ; 
+				  border-radius: 8px ;
+				  margin : 30px auto ; 
+				  /* margin-top: 30px ;
+				  margin-left: auto ; */
+				}
+
+.product-img    {
+				  width: 100% ;
+				  margin-top: 20px ;
+   			    }
+
+.product-img img {
+					  width: 150px ; 
+					  height: 150px ;
+					}
+					
+.product-title {
+					margin-top: 10px ;
+					margin-bottom: 10px ;
+				  }
+
+.product-price {
+					float: left ;
+					margin-left: 10px ;
+					margin-bottom: 10px ;
+				  }
+.product-order {
+					float: right ;
+					margin-top: 15px ;
+			      }
+			   
+.quantity {
+			width: 100px ;
+			height: 30px ;
+			border: solid lightgray 2px ;
+			border-radius: 2px ;
+			outline: none ;
+			text-align: center ;
+			transition: 0.5s ;
+			-webkit-transition: 0.5s ;
+          }
+
+.quantity:focus {
+				  border: solid darkslategray 2px ;
+				}
+		  
+.order-btn {
+			background-color: #0077ff ;
+			color: white ;	
+			width: 75px ;
+			height: 30px ;
+			border: 2px solid #0047ca ;
+			margin-right: 10px ;
+			
+		  }
+
+.order-btn:hover {
+					background-color: #0061cf ;
+					color: white ;
+					cursor: pointer ;
+				}
+	
+.page-select {	 
+				 grid-column: span 4 ;
+				 text-align: center ;
+				 margin-bottom: 50px ;
+			 }
+
+.page-select button {
+				 		color: black ;
+						padding: 8px 16px ;
+				 		border: 1px solid #ddd ;
+				 		text-decoration: none ;
+			   		}
+
+.page-select button:hover {
+							background-color: lightgray ;
+							cursor: pointer;
+					  	  }
+
+.page-select button.active-page {
+							 		background-color: #0077ff ;
+							 		color: white ; 
+						   		}
+
+.page-select button:focus {
+							outline: none ;
+					      }
+
+/********************* RightArea *********************/
+
+/******** Receipt Page ********/
+.sale-area {
+			 max-width: 100% ;
+			 height: auto ;
+			 grid-column: span 6 ;
+			 background-color: #d1d1d1 ;
+			 display: grid ;
+			 grid-template-columns: repeat(2,1fr) ;
+			 grid-gap: 10px ;
+		   }
+	
+.type-box {
+			grid-column: span 1 ;
+		  }		   
+
+.test-box {	
+			width: 95% ;
+			height: 150px ;
+			background-color: white ;
+			margin-top: 10px ;
+			margin-left: auto ;
+			margin-right: auto ;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+		  }
+
+.type-chart-box {
+				  width: 95% ;
+				  height: 400px ;
+				  background-color: white ;
+				  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+				  overflow: auto ;
+				  margin: 50px auto ;
+				}
+
+.status-box {
+				grid-column: span 1 ;
+				width: 95% ;
+				height: 650px ;
+				background-color: white ;
+				margin-top: 10px ;
+				margin-left: auto ;
+				margin-right: auto ;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+			}
+
+.daily-total-frame {
+					  display: block ;
+					  width: 250px ;
+					  height: 250px ;
+					  border: solid #76c400 15px ;
+					  border-radius: 50% ;
+					  margin: 25px auto ;
+				   }
+
+.sale-status-table {
+					  width: 90% ;
+					  border-collapse: collapse ;
+					  font-size: 18px ;
+					  margin: 10px auto ;
+				   }
+
+.sale-status-table th {
+						border-bottom: solid #ddd 5px ;
+					  }
+				   
+.sale-status-table td {
+						border-bottom: solid #ddd 2px ;
+					  }	
+
+.income-chart-box {
+					grid-column: span 2 ;
+					width: 95% ;
+					height: 600px ;
+					background-color: white ;
+					overflow: auto ;
+					margin: 10px auto ;
+					box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+				  }
+
+.income-chart-bg {
+					width: 95% ;
+					height: 400px ;
+					position: relative ;
+					margin: 40px auto ;
+					background-color: #005e99 ;
+				 }
+
+.receipt-area {
+				max-width: 100% ;
+				height: auto ;
+				grid-column: span 5 ;
+			  }
+
+.receipt-content {
+					width: 95% ;
+					height: auto ;
+					margin-left: 2.5% ;
+					margin-right: 2.5% ;
+ 				 }
+
+/******** Receipt Page ********/
+
+/******** Setiing Page ********/
+
+.menuarea {
+			background-color: #ffffff ;
+			max-width: 100% ;
+			height: auto ;
+			grid-column: span 11 ;
+		  }
+
+.menu-content {
+				width: 95% ;
+				height: auto ;
+				margin-left: 2.5% ;
+				margin-right: 2.5% ;
+	  		  }
+
+/******** Setiing Page ********/
+
+
+/******************** PAYMENT WINDOW ********************/
+
+.payment-window {
+				  display: none ; 
+				  position: fixed ; 
+				  z-index: 1 ;
+				  padding-top: 100px ;
+				  left: 0 ;
+				  top: 0 ;
+				  width: 100% ;
+				  height: 100% ;
+				  background-color: rgb(0,0,0) ; 
+  		  		  background-color: rgba(0,0,0,0.4) ; 
+				}
+
+.payment-box {
+				background-color: white ;
+				position: relative;
+				margin: auto ;
+				width: 40% ;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+				-webkit-animation-name: animatetop ;
+  				-webkit-animation-duration: 0.4s ;
+      			animation-name: animatetop ;
+  		        animation-duration: 0.4s ;
+			}
+
+@-webkit-keyframes animatetop {
+								from { top: -300px ; opacity: 0 ; }
+								to { top: 0 ; opacity: 1 ;}
+							  }
+
+@keyframes animatetop {
+						from { top: -300px ; opacity: 0 ; }
+						to { top: 0 ; opacity: 1 ;}
+					  }
+
+.payment-header {
+				  background-color: #0077ff ;
+				  padding: 15px ;
+				  color: white ;
+				}
+
+.close-btn {
+			 float: right ;
+			 color: white ;
+			 font-size: 28px ;
+		   }
+
+.close-btn:hover {
+				   color: lightgray ;
+				   cursor: pointer ;
+				 }
+
+.payment-body {
+				background-color: white ;
+				padding-bottom: 50px ;
+				height: 250px ;
+				overflow: auto ;
+			  }
+
+.payment-table {
+				 position: relative ;
+				 margin: auto ; 
+				 margin-top: 50px ;
+				 width: 80% ;
+			   }
+
+.payment-footer {
+				  background-color: lightgray ;
+				  text-align: right ;
+				  padding: 5px 15px ;
+				}
+
+.payment-confirm {
+					background-color: white ;
+					text-align: right ;
+					padding: 10px ;
+				 }
+
+.confirm-btn {
+			   background-color: #0077ff ;
+			   color: white ;
+			   width: 75px ;
+			   height: 40px ;
+			   border: 0 ;
+			   border-radius: 4px ;
+			 }
+
+.confirm-btn:hover {
+					 background-color: #0061cf ;
+				   }
+
+.cancel-btn {
+			  background-color: #f44336 ; 
+			  color: white ;
+			  width: 75px ;
+			  height: 40px ;
+			  border: 0 ;
+			  border-radius: 4px ;
+			  margin-right: 20px ;
+			}
+
+.cancel-btn:hover {
+					background-color: FireBrick ;
+				  }
+				
+
+
+/******************** PAYMENT WINDOW ********************/
+
+/****** RECIPE WINDOW ******/
+
+.receipt-window {
+				  display: none ; 
+				  position: fixed ; 
+				  z-index: 1 ;
+				  overflow: auto ;
+				  left: 0 ;
+				  top: 0 ;
+				  width: 100% ;
+				  height: 100% ;
+				  background-color: rgb(0,0,0) ; 
+				  background-color: rgba(0,0,0,0.4) ; 
+				}
+
+.receipt-box {
+				background-color: white ;
+				float: right ;
+				position: relative ;
+				width: 40% ;
+				height: 100% ;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+				-webkit-animation-name: animateright;
+  				-webkit-animation-duration: 0.4s;
+      			animation-name: animateright;
+  		        animation-duration: 0.4s ;
+			 }
+
+.receipt-header {
+				 background-color: #0077ff ;
+				 padding: 15px ;
+				 color: white ;
+				}
+
+.receipt-close-btn {
+					 float: right ;
+					 color: white ;
+					 font-size: 28px ;
+				   }
+
+.receipt-close-btn:hover {
+							color: lightgray ;
+							cursor: pointer ;
+				  		 }
+
+.receipt-body {
+				background-color: white ;
+				padding-bottom: 50px ;
+				overflow: auto ;
+			  }
+
+.table-receipt-info {
+						width: 100% ;
+						height: auto ;
+					}
+
+.table-receipt-info th {
+						 background-color: rgb(212, 212, 212) ;
+						 padding : 10px ;
+					   }
+
+.table-receipt-info td {
+						 padding : 5px ;
+					   }
+			 
+@-webkit-keyframes animateright {
+									from { right: -300px ; opacity: 0 ; }
+									to { right: 0 ; opacity: 1 ;}
+			  				  	}
+
+@keyframes animateright {
+							from { right: -300px ; opacity: 0 ; }
+							to { right: 0 ; opacity: 1 ;}
+	  				  	}
+
+/****** RECIPE WINDOW ******/
+
+/************** EDIT WINDOW **************/
+
+#edit-window {
+				display: none ;
+				position: fixed ;
+				z-index: 1 ;
+				padding-top: 100px ;
+				left: 0 ;
+				top: 0 ;
+				width: 100% ;
+				height: 100% ;
+			 }
+
+.edit-header {
+				padding: 15px ;
+			 }
+
+.edit-box {
+			background-color: white ;
+			position: relative ;
+			margin: auto ;
+			width: 400px ;
+			height: 450px ; 
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+		  }
+
+.edit-close-btn {
+					float: right ;
+					color: lightgray ;
+					font-size: 28px ;
+					margin-right: 10px ;
+		  		}
+
+.edit-close-btn:hover {
+				   		color: gray ;
+				   		cursor: pointer ;
+					  }
+
+#edit-product-name,#edit-product-price {
+					 						width: 150px ;
+					 						height: 30px ;
+											border: solid lightgray 3px ;
+					 						border-radius: 3px ;
+					 						outline: none ;
+					 						transition: 0.5s ;
+					 						-webkit-transition: 0.5s ;
+				   					   }
+
+#edit-product-name:focus,#edit-product-price:focus {
+														border: solid darkslategray 3px ;
+												   }	
+
+#save-btn {
+			background-color: #0077ff ;
+			color: white ;
+			width: 100px ;
+			height: 40px ;
+			border: 0 ;
+			border-radius: 4px ;
+			margin-left: 100px ;
+			margin-top: 10px ;
+		  }
+
+#save-btn:hover {
+				  background-color: #0061cf ;
+				}
+
+#dontsave-btn {
+				background-color: #f44336 ;
+				color: white ;
+				width: 100px ;
+				height: 40px ;
+				border: 0 ;
+				border-radius: 4px ;
+				margin-top: 10px ;
+			  }
+
+#dontsave-btn:hover {
+					  background-color: firebrick ;
+					}
+/************** EDIT WINDOW **************/
+
+/************** Add WINDOW **************/
+#addproduct-btn {
+					width: 100px ;
+					height: 40px ;
+					background-color: #0077ff ;
+					color: white ;
+					font-size: 18px ;
+					border: 0 ;
+					border-radius: 4px ;
+		 		}
+
+#addproduct-btn:hover {
+				 		background-color: #0061cf ;
+			   		  }
+
+#add-window {
+				display: none ;
+				position: fixed ;
+				z-index: 1 ;
+				padding-top: 100px ;
+				left: 0 ;
+				top: 0 ;
+				width: 100% ;
+				height: 100% ;
+			 }
+
+.add-header {
+				padding: 15px ;
+			}
+
+.add-box {
+			background-color: white ;
+			position: relative ;
+			margin: auto ;
+			width: 400px ;
+			height: 450px ;
+			top: -300px ; 
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+		 }
+
+.add-close-btn {
+					float: right ;
+					color: lightgray ;
+					font-size: 28px ;
+					margin-right: 10px ;
+		  	   }
+
+.add-close-btn:hover {
+				   		color: gray ;
+				   		cursor: pointer ;
+			  		 }
+/************** Add WINDOW **************/
+
+
+/******************** RESPONSIVE ********************/
+
+
+@media only screen and (min-width: 1440px) and (max-width: 1600px) {
+												.product-area {
+				 												display: grid ;
+																grid-template-columns: repeat(3,1fr) ;
+															  }																														
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+												.type-chart-box{
+																 height: auto ;
+															   }
+
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+											.leftarea {	
+														grid-column: span 11 ;
+														display: none ;
+														border: none ;
+													  }	
+
+											.type-box,.status-box {
+																	grid-column: span 2 ;
+																	}
+																	
+											.rightarea {
+														 grid-column: span 11 ;
+													   }
+
+
+											.product-area {
+															display:grid ;
+															grid-template-columns: repeat(2,1fr) ;
+														  }
+
+											.product-box {
+														   margin: 25px auto ;
+														 }
+}
+										   
+@media only screen and (min-width: 300px) and (max-width: 640px) {
+											.container {
+														 height: auto ;
+													   }
+
+											.header{
+													  grid-column: span 12 ;
+													  display: grid ;
+													  grid-template-columns: repeat(3,1fr) ;
+													  position: sticky ;
+													  top: 0px ;
+													  width: 100% ;
+													  height: 40px ;
+													  z-index: 1 ;
+												   }
+											
+											.header-menu {
+															margin: 0 ;
+															padding: 0 ;
+														 }
+											
+											.header-menu:nth-child(1) {
+																		margin: 0 ;
+																	  }
+
+											.header-img {
+														  margin-top: 5px ;
+														}
+
+											.cart-window {
+															position: relative ;
+															-webkit-animation-name: animatecart ;
+															-webkit-animation-duration: 0.4s ;
+															animation-name: animatecart ;
+															animation-duration: 0.6s ;
+														 }
+
+
+											@-webkit-keyframes animatecart {
+																				from { right: -300px ; opacity: 0 ; }
+																				to { right: 0 ; opacity: 1 ; }
+  																		   }
+
+											@keyframes animatecart {
+																		from { right: -300px ; opacity: 0 ; }
+																		to { right: 0 ; opacity: 1 ;}
+																   }
+
+											.leftarea {
+														grid-column: span 12 ;
+														height: auto ;
+														display: none ;
+													  }
+
+											.rightarea {
+														grid-column: span 12 ;
+													   }
+													   
+											.page-select {
+														   grid-column: span 2 ;
+														   margin-top: 100px ;
+														 }
+
+											.product-type {
+															width: 100% ;
+														  }
+											
+											.product-type button:nth-child(1) {
+																				 margin: 0 ;
+																			  }					 
+
+											.product-type button {
+																	width: 20% ;
+																 }
+
+											.product-area {
+															display:grid ;
+															grid-template-columns: repeat(2,1fr) ;
+												          }
+
+										    .product-box {
+														   width: 100% ;
+														   margin: 25px 2.5px ;
+														 }
+
+											.product-box button {
+																  width: 50px ;
+																}
+														
+											.product-price h2 {
+																font-size: 20px ;
+															  }
+
+											.payment-box {
+														   width: 80% ;
+														 }
+														 
+											.menuarea {
+														grid-column: span 12 ;
+													  }
+											
+											.menu-content {
+															width: 100% ;
+															margin: 0 ;
+														  }
+
+											.menu-content h1 {
+																margin-left: 15px ;
+															 }
+
+											.receipt-box {
+															width: 90% ;
+														 }
+											
+											.sale-area,.receipt-area {
+														 				grid-column: span 12 ; 
+																	 }
+
+											.type-box,.status-box {
+																	grid-column: span 2 ;
+																  }
+											.type-chart-box {
+															   margin-top: 25px ; 
+															   margin-bottom: 10px ;
+															}
+ }
+/******************** RESPONSIVE ********************/
